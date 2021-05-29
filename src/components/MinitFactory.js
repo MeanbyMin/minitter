@@ -8,10 +8,10 @@ const MinitFactory = ({ userObj }) => {
   const [minit, setMinit] = useState("");
   const [attachment, setAttachment] = useState("");
   const onSubmit = async (e) => {
+    e.preventDefault();
     if (minit === "") {
       return;
     }
-    e.preventDefault();
     // uuid는 기본적으로 어떤 특별한 식별자를 랜덤으로 생성해준다.
     let attachmentUrl = "";
     if (attachment !== "") {
