@@ -53,7 +53,9 @@ const MinitFactory = ({ userObj }) => {
       setAttachment(result);
     };
     // 파일 읽기
-    reader.readAsDataURL(theFile);
+    if (Boolean(theFile)) {
+      reader.readAsDataURL(theFile);
+    }
   };
 
   const onClearAttachment = () => {
