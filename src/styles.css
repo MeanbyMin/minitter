@@ -256,7 +256,6 @@ form {
   background: #04aaff;
   color: white;
   margin-top: 10px;
-  box-sizing: content-box;
   cursor: pointer;
 }
 
