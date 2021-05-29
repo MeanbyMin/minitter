@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/minitter/static/css/main.b7536c8d.chunk.css",
-    "main.js": "/minitter/static/js/main.ddd31d51.chunk.js",
-    "main.js.map": "/minitter/static/js/main.ddd31d51.chunk.js.map",
+    "main.css": "/minitter/static/css/main.978247db.chunk.css",
+    "main.js": "/minitter/static/js/main.20ff81a0.chunk.js",
+    "main.js.map": "/minitter/static/js/main.20ff81a0.chunk.js.map",
     "runtime-main.js": "/minitter/static/js/runtime-main.ed8698a0.js",
     "runtime-main.js.map": "/minitter/static/js/runtime-main.ed8698a0.js.map",
     "static/js/2.e67b7d55.chunk.js": "/minitter/static/js/2.e67b7d55.chunk.js",
     "static/js/2.e67b7d55.chunk.js.map": "/minitter/static/js/2.e67b7d55.chunk.js.map",
     "index.html": "/minitter/index.html",
-    "static/css/main.b7536c8d.chunk.css.map": "/minitter/static/css/main.b7536c8d.chunk.css.map",
+    "static/css/main.978247db.chunk.css.map": "/minitter/static/css/main.978247db.chunk.css.map",
     "static/js/2.e67b7d55.chunk.js.LICENSE.txt": "/minitter/static/js/2.e67b7d55.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ed8698a0.js",
     "static/js/2.e67b7d55.chunk.js",
-    "static/css/main.b7536c8d.chunk.css",
-    "static/js/main.ddd31d51.chunk.js"
+    "static/css/main.978247db.chunk.css",
+    "static/js/main.20ff81a0.chunk.js"
   ]
 }
