@@ -6,8 +6,8 @@
 
 input {
   all: unset;
-  box-sizing: border-box;
   appearance: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -275,8 +275,8 @@ form {
 }
 
 .footer{
-    position: absolute;
-    bottom: 25px;
-    left: 30px;
+    position: fixed;
+    bottom: 15px;
+    left: 20px;
 
 }
