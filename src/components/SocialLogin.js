@@ -1,6 +1,8 @@
 import React from "react";
 import { authService } from "fbase";
 import { firebaseInstance } from "fbase";
+import { faGoogle, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SocialLogin = () => {
   const onSocialClick = async (e) => {
@@ -18,12 +20,12 @@ const SocialLogin = () => {
     console.log(data);
   };
   return (
-    <div>
-      <button onClick={onSocialClick} name="google">
-        Google로 로그인
+    <div className="authBtns">
+      <button onClick={onSocialClick} name="google" className="authBtn">
+        Google로 로그인 <FontAwesomeIcon icon={faGoogle} />
       </button>
-      <button onClick={onSocialClick} name="github">
-        Github로 로그인
+      <button onClick={onSocialClick} name="github" className="authBtn">
+        Github로 로그인 <FontAwesomeIcon icon={faGithub} />
       </button>
     </div>
   );

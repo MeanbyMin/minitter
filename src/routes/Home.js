@@ -34,9 +34,9 @@ const Home = ({ userObj }) => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <MinitFactory userObj={userObj} />
-      <div>
+      <div style={{ marginTop: 30 }}>
         {minits.map((minit) => (
           <Minit
             key={minit.id}

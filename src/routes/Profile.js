@@ -25,22 +25,35 @@ export default ({ refreshUser, userObj }) => {
         displayName: newDisplayName,
       });
       refreshUser();
-      setNewDisplayName("");
+      // setNewDisplayName("");
     }
   };
 
   return (
     <>
-      <form onSubmit={onSubmit}>
-        <input
-          type="text"
-          placeholder="프로필 이름"
-          onChange={onChange}
-          value={newDisplayName}
-        />
-        <input type="submit" value="프로필 수정" />
-      </form>
-      <button onClick={onLogOutClick}>로그아웃</button>
+      <div className="container">
+        <form onSubmit={onSubmit} className="profileForm">
+          <input
+            type="text"
+            autoFocus
+            placeholder="프로필 이름"
+            onChange={onChange}
+            value={newDisplayName}
+            className="formInput"
+          />
+          <input
+            type="submit"
+            value="프로필 수정"
+            className="formBtn"
+            style={{
+              marginTop: 10,
+            }}
+          />
+        </form>
+        <span className="formBtn cancelBtn logOut" onClick={onLogOutClick}>
+          로그아웃
+        </span>
+      </div>
     </>
   );
 };

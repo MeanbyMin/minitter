@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { dbService, storageService } from "fbase";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Minit = ({ minitObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
@@ -28,12 +30,12 @@ const Minit = ({ minitObj, isOwner }) => {
     setNewMinit(value);
   };
   return (
-    <div>
+    <div className="minit">
       {editing ? (
         <>
           {isOwner && (
             <>
-              <form onSubmit={onSubmit}>
+              <form onSubmit={onSubmit} className="container minitEdit">
                 <input
                   type="text"
                   placeholder="Minit 수정하기"
@@ -41,9 +43,11 @@ const Minit = ({ minitObj, isOwner }) => {
                   required
                   onChange={onChange}
                 />
-                <input type="submit" value="Minit 수정" />
+                <input type="submit" value="Minit 수정" className="formBtn" />
               </form>
-              <button onClick={toggleEditing}>취소</button>
+              <button onClick={toggleEditing} className="formBtn cancelBtn">
+                취소
+              </button>
             </>
           )}
         </>
@@ -51,18 +55,17 @@ const Minit = ({ minitObj, isOwner }) => {
         <>
           <h4>{minitObj.text}</h4>
           {minitObj.attachmentUrl && (
-            <img
-              src={minitObj.attachmentUrl}
-              width="50px"
-              height="50px"
-              alt={minitObj.attachmentUrl}
-            />
+            <img src={minitObj.attachmentUrl} alt={minitObj.attachmentUrl} />
           )}
           {isOwner && (
-            <>
-              <button onClick={onDeleteClick}>Minit 삭제</button>
-              <button onClick={toggleEditing}>Minit 수정</button>
-            </>
+            <div class="minit__actions">
+              <span onClick={onDeleteClick}>
+                <FontAwesomeIcon icon={faTrash} />
+              </span>
+              <span onClick={toggleEditing}>
+                <FontAwesomeIcon icon={faPencilAlt} />
+              </span>
+            </div>
           )}
         </>
       )}

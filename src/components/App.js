@@ -46,7 +46,9 @@ function App() {
       ) : (
         "초기화중..."
       )}
-      <footer>&copy; {new Date().getFullYear()} Minitter</footer>
+      <footer className="footer">
+        &copy; {new Date().getFullYear()} Minitter
+      </footer>
     </>
   );
 }
